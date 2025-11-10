@@ -28,10 +28,10 @@ jobs:
             nuget-${{ runner.os }}-
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore BackApi/BackApi.sln
 
       - name: Build (Release)
-        run: dotnet build -c Release --no-restore
+        run: dotnet build BackApi/BackApi.sln -c Release --no-restore
 
   frontend:
     name: Build Angular 19.2.2 Frontend
